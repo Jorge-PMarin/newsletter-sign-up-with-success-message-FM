@@ -1,0 +1,73 @@
+@use '../variables';
+
+.message {
+  display: block;
+  background-color: variables.$white;
+  padding: 0 2rem;
+  min-height: 100vh;
+  max-width: 60rem;
+
+  &__img {
+    padding: 14rem 0rem 4rem 0rem;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    color: variables.$charcoal-grey;
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    line-height: 2.4rem;
+    color: variables.$charcoal-grey;
+    margin-bottom: 25rem;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 1.5rem 0;
+    border-radius: 0.8rem;
+    border: none;
+    background-color: variables.$dark-slate-grey;
+    color: variables.$white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 4rem;
+
+    &:hover {
+      background-color: variables.$tomato;
+      box-shadow: 3px 22px 46px -15px variables.$tomato;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .message {
+    min-height: auto;
+    max-width: 45rem;
+    padding: 4rem;
+    border-radius: 3rem;
+
+    &__img {
+      padding: 0rem 0rem 3rem 0rem;
+    }
+
+    &__heading {
+      padding: 0;
+      font-size: 5rem;
+    }
+
+    &__paragraph {
+      padding-bottom: 4rem;
+      margin: 0;
+    }
+
+    &__btn {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.message {
+    display: none;
+}

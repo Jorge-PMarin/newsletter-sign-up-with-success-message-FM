@@ -1,4 +1,5 @@
 @use './reset';
 @use './variables';
 @use './typography';
-@use './component'
+@use './components/newsletter';
+@use './components/successCard';

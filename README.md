@@ -29,6 +29,7 @@ Users should be able to:
 - SASS - SCSS
 - Flexbox
 - Mobile-first workflow
+- BEM
 
 ## Author
 

@@ -1,0 +1,178 @@
+@use '../variables';
+
+body {
+  min-height: 100vh;
+  background-color: variables.$charcoal-grey;
+  display: flex;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.newsletter {
+  background-color: variables.$white;
+  border-radius: 0rem 0rem 2rem 2rem;
+
+  &__right {
+    &__mobile {
+      width: 100%;
+    }
+
+    &__desktop {
+      display: none;
+    }
+  }
+
+  &__left {
+    padding: 3.5rem 2rem;
+    color: variables.$dark-slate-grey;
+
+    &__heading {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    &__paragraph {
+      margin-bottom: 2rem;
+    }
+
+    &__list {
+      list-style-type: none;
+      margin-bottom: 3.5rem;
+
+      li {
+        display: flex;
+        align-items: start;
+        margin-bottom: 1.5rem;
+
+        img {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      padding: 1.5rem 0;
+      border-radius: 0.8rem;
+      border: none;
+      background-color: variables.$dark-slate-grey;
+      color: variables.$white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: variables.$tomato;
+        box-shadow: 3px 22px 46px -15px variables.$tomato;
+      }
+    }
+  }
+
+  &__group {
+    position: relative;
+
+    &__label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    &__input {
+      padding: 1.5rem 2rem;
+      border-radius: 0.8rem;
+      border: 0.1rem solid variables.$grey;
+      margin-bottom: 2rem;
+      width: 100%;
+
+      &:focus {
+        border: 0.1rem solid variables.$dark-slate-grey;
+      }
+
+      &--active {
+        background-color: lighten(variables.$tomato, 28%);
+        border: 0.1rem solid variables.$tomato;
+
+        &::placeholder {
+          color: variables.$tomato;
+        }
+      }
+    }
+
+    &__error {
+      display: none;
+
+      &--active {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.3rem;
+        color: variables.$tomato;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .newsletter {
+    max-width: 51rem;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    align-items: center;
+  }
+  .newsletter {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: none;
+    border-radius: 2.5rem;
+    box-shadow: 3px 22px 46px -15px rgba(0, 0, 0, 0.44);
+
+    &__right {
+      &__mobile {
+        display: none;
+      }
+
+      &__desktop {
+        display: block;
+        padding: 2rem 2rem 2rem 0rem;
+      }
+    }
+
+    &__left {
+      padding: 5.4rem;
+      max-width: 52rem;
+      &__heading {
+        font-size: 5rem;
+        margin-top: 2rem;
+      }
+      &__paragraph {
+        line-height: 2.4rem;
+        margin-bottom: em;
+      }
+      &__btn {
+        padding: 2.2rem;
+        font-weight: 700;
+      }
+    }
+
+    &__group {
+      &__label {
+        margin-bottom: 1.2rem;
+      }
+      &__input {
+        padding: 2rem;
+        margin-bottom: 2.6rem;
+      }
+    }
+  }
+}

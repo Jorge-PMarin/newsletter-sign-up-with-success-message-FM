@@ -310,7 +310,7 @@ template {
   display: none;
 }
 
-* {
+*, h1 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -323,4 +323,216 @@ template {
 body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(235, 18%, 26%);
+  display: flex;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.newsletter {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0rem 0rem 2rem 2rem;
+}
+.newsletter__right__mobile {
+  width: 100%;
+}
+.newsletter__right__desktop {
+  display: none;
+}
+.newsletter__left {
+  padding: 3.5rem 2rem;
+  color: hsl(234, 29%, 20%);
+}
+.newsletter__left__heading {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.newsletter__left__paragraph {
+  margin-bottom: 2rem;
+}
+.newsletter__left__list {
+  list-style-type: none;
+  margin-bottom: 3.5rem;
+}
+.newsletter__left__list li {
+  display: flex;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+.newsletter__left__list li img {
+  margin-right: 1.5rem;
+}
+.newsletter__left__btn {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.newsletter__left__btn:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 3px 22px 46px -15px hsl(4, 100%, 67%);
+}
+.newsletter__group {
+  position: relative;
+}
+.newsletter__group__label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.newsletter__group__input {
+  padding: 1.5rem 2rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid hsl(231, 7%, 60%);
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.newsletter__group__input:focus {
+  border: 0.1rem solid hsl(234, 29%, 20%);
+}
+.newsletter__group__input--active {
+  background-color: #ffe7e6;
+  border: 0.1rem solid hsl(4, 100%, 67%);
+}
+.newsletter__group__input--active::-moz-placeholder {
+  color: hsl(4, 100%, 67%);
+}
+.newsletter__group__input--active::placeholder {
+  color: hsl(4, 100%, 67%);
+}
+.newsletter__group__error {
+  display: none;
+}
+.newsletter__group__error--active {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.3rem;
+  color: hsl(4, 100%, 67%);
+  font-weight: 700;
+}
+
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .newsletter {
+    max-width: 51rem;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    align-items: center;
+  }
+  .newsletter {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: none;
+    border-radius: 2.5rem;
+    box-shadow: 3px 22px 46px -15px rgba(0, 0, 0, 0.44);
+  }
+  .newsletter__right__mobile {
+    display: none;
+  }
+  .newsletter__right__desktop {
+    display: block;
+    padding: 2rem 2rem 2rem 0rem;
+  }
+  .newsletter__left {
+    padding: 5.4rem;
+    max-width: 52rem;
+  }
+  .newsletter__left__heading {
+    font-size: 5rem;
+    margin-top: 2rem;
+  }
+  .newsletter__left__paragraph {
+    line-height: 2.4rem;
+    margin-bottom: em;
+  }
+  .newsletter__left__btn {
+    padding: 2.2rem;
+    font-weight: 700;
+  }
+  .newsletter__group__label {
+    margin-bottom: 1.2rem;
+  }
+  .newsletter__group__input {
+    padding: 2rem;
+    margin-bottom: 2.6rem;
+  }
+}
+.message {
+  display: block;
+  background-color: hsl(0, 0%, 100%);
+  padding: 0 2rem;
+  min-height: 100vh;
+  max-width: 60rem;
+}
+.message__img {
+  padding: 14rem 0rem 4rem 0rem;
+}
+.message__heading {
+  font-size: 4rem;
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 2rem;
+}
+.message__paragraph {
+  line-height: 2.4rem;
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 25rem;
+}
+.message__btn {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 4rem;
+}
+.message__btn:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 3px 22px 46px -15px hsl(4, 100%, 67%);
+}
+
+@media (min-width: 900px) {
+  .message {
+    min-height: auto;
+    max-width: 45rem;
+    padding: 4rem;
+    border-radius: 3rem;
+  }
+  .message__img {
+    padding: 0rem 0rem 3rem 0rem;
+  }
+  .message__heading {
+    padding: 0;
+    font-size: 5rem;
+  }
+  .message__paragraph {
+    padding-bottom: 4rem;
+    margin: 0;
+  }
+  .message__btn {
+    margin-bottom: 2rem;
+  }
+}
+.message {
+  display: none;
 }

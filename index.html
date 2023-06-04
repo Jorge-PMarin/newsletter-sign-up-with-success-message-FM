@@ -20,10 +20,17 @@
         <div class="newsletter__right">
           <img
             src="./src/assets/images/illustration-sign-up-mobile.svg"
-            alt=""
-            class="newsletter__right__img"
+            alt="Orange Illustration"
+            class="newsletter__right__mobile"
+          />
+
+          <img
+            src="./src/assets/images/illustration-sign-up-desktop.svg"
+            alt="Orange illustration"
+            class="newsletter__right__desktop"
           />
         </div>
+
         <div class="newsletter__left">
           <h1 class="newsletter__left__heading">Stay Updated!</h1>
           <p class="newsletter__left__paragraph">
@@ -55,18 +62,24 @@
               <p>And much more!</p>
             </li>
           </ul>
-          
+
           <!-- Sign-up form start -->
           <form class="newsletter__left__form">
-            <label for="email" class="newsletter__left__label"
-              >Email address</label
-            >
-            <input
-              type="text"
-              placeholder="email@company.com"
-              class="newsletter__left__input"
-              id="email"
-            />
+            <div class="newsletter__group">
+              <label for="email" class="newsletter__group__label"
+                >Email address</label
+              >
+              <input
+                type="text"
+                placeholder="email@company.com"
+                autofocus
+                class="newsletter__group__input"
+                id="email"
+              />
+              <label for="email" class="newsletter__group__error"
+                >Valid email required</label
+              >
+            </div>
             <button class="newsletter__left__btn">
               Subscribe to monthly newsletter
             </button>
