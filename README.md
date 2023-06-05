@@ -16,12 +16,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![desktop design](./my-design/my-desktop-design.png)
+![desktop success](./my-design/my-desktop-success.png)
+![mobile design](./my-design/my-mobile-design.png)
+![mobile success](./my-design/my-mobile-success.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/Jorge-PMarin/newsletter-sign-up-with-success-message-FM
+- Live Site URL: https://jorge-pmarin.github.io/newsletter-sign-up-with-success-message-FM/
 
 ### Built with
 
@@ -30,7 +33,3 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - BEM
-
-## Author
-
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
